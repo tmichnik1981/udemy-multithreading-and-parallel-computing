@@ -22,6 +22,32 @@
 
 - List of processes (on Windows): `tasklist`
 
+- Lifecycle
+
+  - new - after instantiating
+  - runnable - after starting
+  - running
+  - waiting - waiting for another thread to finish, sleeping
+  - dead - finished
+
+- Join - waiting for the thread to finish
+
+  ```java
+  Runner1 thread1 = new Runner1();
+  Runner2 thread2 = new Runner2();
+  		
+  thread1.start();
+  thread2.start();
+
+  try {
+  	//we will wait until threads 1 and 2 are finished
+  	thread1.join();
+  	thread2.join();
+  } catch (InterruptedException e) {
+  	e.printStackTrace();
+  }
+  ```
+
 - Volatile
 
   - every CPU has its own cache which is much faster than RAM
