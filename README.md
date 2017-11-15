@@ -100,6 +100,25 @@
   new ReentrantLock(boolean fairnessParameter);
   ```
 
+- Semaphores
+
+  - counting semaphores - allows an arbitrary resource count
+  - binary semaphores - restricted to values 1 or 0
+  - semaphores tracks only how many resources are free
+  - may serve as a useful trigger for a number of different actions
+  - possible producent-consumer solution
+
+- Mutexes
+
+  - like a binary semaphore
+  - owner concept - only the process that locked the mutex is supposed to unlock it
+  - possibility to promote the priority of the owner whenever a higher-priority task starts waiting on the mutex
+  - may provide deletion safety
+
+  ​
+
+  ​
+
   ​
 
 #### Instructions
