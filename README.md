@@ -115,9 +115,47 @@
   - possibility to promote the priority of the owner whenever a higher-priority task starts waiting on the mutex
   - may provide deletion safety
 
-  ​
+- Latches
 
-  ​
+  - waiting for other task to finish
+
+  ```java
+  ///thread I
+  //creating latch with counter 5
+  CountDownLatch latch = new CountDownLatch(5);
+  //waiting
+  latch.await();
+
+  //other threads
+  //counting down
+  countDownLatch.countDown();
+  ```
+
+- CyclicBarrier
+
+  - like latches but can be re-used
+  - can run some action when the counter reaches 0
+
+- BlockingQueue
+
+  - producer/consumer solution
+  - one thread out items while the other one picks up
+
+- Delay queue
+
+  - keeps the objects internally until the certain delay has expired
+
+- PriorityQueue
+
+  - implementation BlockingQueue bud objects are sorted in a queue
+
+- ConcurrentHashMap
+
+  - synchronized is only entry which we are working on
+
+- Exchanger
+
+  - two threads can exchange the objects
 
   ​
 
