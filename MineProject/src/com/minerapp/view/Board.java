@@ -9,4 +9,9 @@ public class Board  extends Component{
 		
 	}
 
+	public void setMine(int index) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
